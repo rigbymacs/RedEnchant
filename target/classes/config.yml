@@ -1,0 +1,59 @@
+### PrisonEnchants Plugin Configuration ###
+
+## Header to use for Enchanting signs ##
+SIGN_HEADER: '&b[&3Enchant&b]'
+
+## ChatColor value of the Enchantment line on signs ##
+## https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/ChatColor.html ##
+ENCHANT_COLOR: GREEN
+## ChatColor value for the Token line on signs ##
+TOKENS_COLOR: GOLD
+
+## Max Enchantment Level Configuration ##
+## Any values not listed here will have no cap ##
+max:
+  HASTE: 3
+  JUMP: 2
+  FIRE_ASPECT: 2
+
+## Material values for safe-enchanting items ##
+## Any values not here can be applied to any item ##
+items:
+  HASTE:
+  - DIAMOND_PICKAXE
+  JUMP:
+  - IRON_BOOTS
+
+## Blasting Enchant Configuration ##
+blasting:
+  ## Minimum chance of explosion happening ##
+  ## This will be the chance assigned to items with Blasting I ##
+  CHANCE_MIN: 30
+  ## Chance amount to add per-level of Blasting ##
+  ## IE. Blasting III will have 2X(this value) more chance than Blasting I ##
+  CHANCE_INCREMENT: 5
+  ## Maximum chance of explosion happening ##
+  ## If the item's level x CHANCE_INCREMENT is greater than this, default to this ##
+  CHANCE_MAX: 65
+  ## Worlds where Blasting cannot be used ##
+  DISABLED_WORLDS:
+  - world_nether
+
+## Message Configuration ##
+messages:
+
+  # Prefix to prepend to all messages #
+  PREFIX: '&b[&3PrisonEnchants&b]'
+
+  # Sent when a Player successfully purchases an Enchantment #
+  # Use %s for the name of the Enchantment#
+  # Use %d for the amount of Tokens spent #
+  PURCHASE_SUCCESS: '&aYou have successfully bought &e%s &afor &6%d Tokens'
+  # Sent when a Player tries to purchase an Enchant they don't have enough Tokens for #
+  PURCHASE_FAILURE: '&cYou do not have enough money to buy this Enchantment!'
+  # Sent when a Player tries to use a sign without an item in-hand #
+  PURCHASE_NO_ITEM: '&cYou must be holding an item to Enchant!'
+  # Sent when a Player tries to upgrade their Enchantment, but is at the highest level #
+  PURCHASE_MAX_ENCHANT: '&cYou have the highest level Enchantment on this item!'
+  # Sent when a Player tries to add an Enchantment to an item that is not allowed #
+  ITEM_CANT_ENCHANT: '&cYou cannot apply that Enchantment to this item!'
