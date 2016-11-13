@@ -28,11 +28,6 @@ public class RedEnchants extends JavaPlugin
         return instance;
     }
 
-    public void onDisable()
-    {
-        getLogger().info("has been disabled");
-    }
-
     public EnchantManager getManager()
     {
         if (enchantManager == null)
