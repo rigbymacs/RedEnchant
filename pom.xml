@@ -3,13 +3,45 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>RedEnchants</artifactId>
-	<!-- Property Configuration -->
-	<properties>
-		<!-- Which version of Bukkit to use -->
-		<bukkit.version>1.8.8-R0.1-SNAPSHOT</bukkit.version>
-		<!-- Encoding to use for project source -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+	<groupId>com.redmancometh</groupId>
+	<version>1.0</version>
+
+	<repositories>
+		<repository>
+			<id>spigot-repo</id>
+			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+		</repository>
+		<repository>
+			<id>opbrelease</id>
+			<url>http://strongholdcraft.com:8081/nexus/content/repositories/opbrelease</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot-api</artifactId>
+			<version>1.8.8-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.bukkit</groupId>
+			<artifactId>bukkit</artifactId>
+			<version>1.8.8-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>me.clip</groupId>
+			<artifactId>AutoSell</artifactId>
+			<version>1.8.8</version>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>javafx</artifactId>
+			<version>2.0</version>
+			<systemPath>${basedir}/lib/jfxrt.jar</systemPath>
+			<scope>system</scope>
+		</dependency>
+	</dependencies>
 
 	<!-- Build Configuration -->
 	<build>
@@ -42,42 +74,10 @@
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<outputDirectory>C:\Users\Redmancometh\Desktop\mazeupdate\plugins</outputDirectory>
+					<outputDirectory>${basedir}/lib/RedEnchant.jar</outputDirectory>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
-	<!-- Dependency Configuration -->
-	<dependencies>
-		<dependency>
-			<groupId>spigotjar</groupId>
-			<artifactId>spigotjar</artifactId>
-			<version>1.8.8</version>
-		</dependency>
-		<dependency>
-			<groupId>me.clip</groupId>
-			<artifactId>AutoSell</artifactId>
-			<version>1.8.8</version>
-		</dependency>
-		<dependency>
-			<groupId>com.redmancometh</groupId>
-			<artifactId>RedEnchants</artifactId>
-			<version>1.2</version>
-		</dependency>
-	</dependencies>
-	<!-- Repository Configuration -->
-	<repositories>
-		<repository>
-			<id>opbrelease</id>
-			<url>http://strongholdcraft.com:8081/nexus/content/repositories/opbrelease</url>
-		</repository>
-		<repository>
-			<id>spigot-repo</id>
-			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-		</repository>
-	</repositories>
-
-	<groupId>com.redmancometh</groupId>
-	<version>1.0</version>
 </project>

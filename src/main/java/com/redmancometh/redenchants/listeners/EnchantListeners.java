@@ -14,7 +14,6 @@ import com.redmancometh.redenchants.RedEnchants;
 import com.redmancometh.redenchants.abstraction.CustomEnchant;
 import com.redmancometh.redenchants.abstraction.MiningEnchant;
 import com.redmancometh.redenchants.abstraction.composites.CustomEquipEnchant;
-
 import javafx.util.Pair;
 
 public class EnchantListeners implements Listener
